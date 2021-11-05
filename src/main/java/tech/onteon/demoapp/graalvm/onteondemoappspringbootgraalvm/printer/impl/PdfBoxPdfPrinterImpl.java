@@ -3,7 +3,7 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp.printer.impl;
+package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.printer.impl;
 
 import lombok.NonNull;
 import org.apache.pdfbox.pdmodel.PDDocument;
@@ -13,8 +13,8 @@ import org.apache.pdfbox.pdmodel.font.PDFont;
 import org.apache.pdfbox.pdmodel.font.PDType1Font;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
-import tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp.printer.exception.PrinterException;
-import tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp.printer.interfaces.PdfPrinter;
+import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.printer.exception.PrinterException;
+import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.printer.interfaces.PdfPrinter;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;

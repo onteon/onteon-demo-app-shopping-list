@@ -3,7 +3,7 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp.printer.exception;
+package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.printer.exception;
 
 /**
  * @author Patryk Borchowiec

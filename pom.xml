@@ -8,17 +8,23 @@
         <version>2.5.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>tech.onteon.app.graalvm</groupId>
-    <artifactId>onteon-spring-boot-graalvm-demo-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-    <name>onteon-spring-boot-graalvm-demo-app</name>
-    <description>onteon-spring-boot-graalvm-demo-app</description>
+
+    <groupId>tech.onteon.demoapp.graalvm</groupId>
+    <artifactId>onteon-demo-app-spring-boot-graalvm</artifactId>
+    <version>1.0.0</version>
+    <name>onteon-demo-app-spring-boot-graalvm</name>
+
     <properties>
         <java.version>11</java.version>
         <repackage.classifier/>
         <spring-native.version>0.10.5</spring-native.version>
     </properties>
+
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
@@ -42,12 +48,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-            <version>RELEASE</version>
-            <scope>compile</scope>
         </dependency>
     </dependencies>
 

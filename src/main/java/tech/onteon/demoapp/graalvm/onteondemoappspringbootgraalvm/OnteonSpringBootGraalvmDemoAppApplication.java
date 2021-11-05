@@ -1,4 +1,4 @@
-package tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp;
+package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

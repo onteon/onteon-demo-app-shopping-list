@@ -1,4 +1,4 @@
-package tech.onteon.app.graalvm.onteonspringbootgraalvmdemoapp;
+package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
