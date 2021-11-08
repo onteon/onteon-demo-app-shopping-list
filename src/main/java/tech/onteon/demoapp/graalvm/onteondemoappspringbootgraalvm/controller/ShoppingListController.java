@@ -39,18 +39,18 @@ public class ShoppingListController {
         this.shoppingListService = shoppingListService;
     }
 
-    @PostMapping("/generate/pdf")
+    @PostMapping("/generate/txt")
     public ResponseEntity<byte[]> generatePdfShoppingList(final @RequestBody @Valid ShoppingListRequest request) {
         final ShoppingListTO shoppingListTO = shoppingListConverter.toShoppingListTO(request);
-        final byte[] pdfBytes = shoppingListService.generatePdf(shoppingListTO);
+        final byte[] responseBytes = shoppingListService.generateTxt(shoppingListTO);
 
         final HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_PDF);
+        headers.setContentType(MediaType.TEXT_PLAIN);
 
-        String filename = "shopping-list.pdf";
+        String filename = "shopping-list.txt";
         headers.setContentDispositionFormData(filename, filename);
         headers.setCacheControl("must-revalidate, post-check=0, pre-check=0");
 
-        return new ResponseEntity<>(pdfBytes, headers, HttpStatus.OK);
+        return new ResponseEntity<>(responseBytes, headers, HttpStatus.OK);
     }
 }

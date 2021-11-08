@@ -13,5 +13,5 @@ import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.Sho
  * @since 0.0.0
  */
 public interface ShoppingListService {
-    byte[] generatePdf(@NonNull final ShoppingListTO shoppingList);
+    byte[] generateTxt(@NonNull final ShoppingListTO shoppingList);
 }

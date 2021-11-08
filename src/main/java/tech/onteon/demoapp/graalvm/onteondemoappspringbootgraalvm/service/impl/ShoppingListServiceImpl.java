@@ -6,12 +6,11 @@
 package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.impl;
 
 import lombok.NonNull;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.printer.interfaces.PdfPrinter;
 import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.interfaces.ShoppingListService;
 import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.ShoppingListTO;
+
+import java.nio.charset.StandardCharsets;
 
 /**
  * @author Patryk Borchowiec
@@ -19,19 +18,15 @@ import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.Sho
  */
 @Service
 public class ShoppingListServiceImpl implements ShoppingListService {
-    private final ApplicationContext applicationContext;
-
-    public ShoppingListServiceImpl(
-            @Autowired final ApplicationContext applicationContext
-    ) {
-        this.applicationContext = applicationContext;
-    }
-
     @Override
-    public byte[] generatePdf(@NonNull final ShoppingListTO shoppingList) {
-        final PdfPrinter pdfPrinter = applicationContext.getBean(PdfPrinter.class);
-        pdfPrinter.printTitle(shoppingList.getTitle());
-        shoppingList.getIngredients().forEach(pdfPrinter::printIngredient);
-        return pdfPrinter.close();
+    public byte[] generateTxt(@NonNull final ShoppingListTO shoppingList) {
+        final StringBuilder sb = new StringBuilder();
+        sb.append(shoppingList.getTitle())
+                .append("\n")
+                .append("-".repeat(shoppingList.getTitle().length()))
+                .append("\n\n");
+        shoppingList.getIngredients().forEach(ingredient -> sb.append("* ").append(ingredient).append("\n"));
+
+        return sb.toString().getBytes(StandardCharsets.UTF_8);
     }
 }
