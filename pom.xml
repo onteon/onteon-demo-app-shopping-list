@@ -10,9 +10,9 @@
     </parent>
 
     <groupId>tech.onteon.demoapp.graalvm</groupId>
-    <artifactId>onteon-demo-app-spring-boot-graalvm</artifactId>
+    <artifactId>onteon-demo-app-shopping-list-graalvm</artifactId>
     <version>1.0.0</version>
-    <name>onteon-demo-app-spring-boot-graalvm</name>
+    <name>onteon-demo-app-shopping-list-graalvm</name>
 
     <properties>
         <java.version>11</java.version>
