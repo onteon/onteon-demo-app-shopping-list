@@ -3,7 +3,7 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.controller;
+package tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.controller.pojo.request.ShoppingListRequest;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.converter.ShoppingListConverter;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.interfaces.ShoppingListService;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.ShoppingListTO;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.controller.pojo.request.ShoppingListRequest;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.converter.ShoppingListConverter;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.interfaces.ShoppingListService;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.to.ShoppingListTO;
 
 import javax.validation.Valid;
 

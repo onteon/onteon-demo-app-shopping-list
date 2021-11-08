@@ -3,10 +3,10 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.interfaces;
+package tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.interfaces;
 
 import lombok.NonNull;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.ShoppingListTO;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.to.ShoppingListTO;
 
 /**
  * @author Patryk Borchowiec

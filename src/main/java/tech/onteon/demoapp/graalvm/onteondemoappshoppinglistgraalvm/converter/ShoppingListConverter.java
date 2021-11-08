@@ -3,11 +3,11 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.converter;
+package tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.converter;
 
 import org.springframework.stereotype.Component;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.controller.pojo.request.ShoppingListRequest;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.ShoppingListTO;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.controller.pojo.request.ShoppingListRequest;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.to.ShoppingListTO;
 
 import java.util.Optional;
 

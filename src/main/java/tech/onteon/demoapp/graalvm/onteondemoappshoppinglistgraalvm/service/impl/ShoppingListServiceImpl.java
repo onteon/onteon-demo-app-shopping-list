@@ -3,12 +3,12 @@
  *  All rights reserved.
  *  Use is subject to license terms.
  */
-package tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.impl;
+package tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.impl;
 
 import lombok.NonNull;
 import org.springframework.stereotype.Service;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.interfaces.ShoppingListService;
-import tech.onteon.demoapp.graalvm.onteondemoappspringbootgraalvm.service.to.ShoppingListTO;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.interfaces.ShoppingListService;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.to.ShoppingListTO;
 
 import java.nio.charset.StandardCharsets;
 
