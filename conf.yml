@@ -8,7 +8,7 @@ app:
     version: '1.0.0'
     executable:
       start:
-        command: '${ont_app_path}/bin/onteon-demo-app-shopping-list-graalvm --server.port=${ont_port_1}'
+        command: '${ont_app_path}/bin/onteon-demo-app-shopping-list-graalvm -Dlog.dir=${ont_app_logs_path} --server.port=${ont_port_1}'
         successLine: 'Started OnteonDemoAppShoppingListGraalvmApplication'
   placeHolder:
     name: 'PlaceHolderManagerImpl'
