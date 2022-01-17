@@ -5,6 +5,7 @@
  */
 package tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.controller;
 
+import ch.qos.logback.classic.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -18,6 +19,7 @@ import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.controller.p
 import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.converter.ShoppingListConverter;
 import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.interfaces.ShoppingListService;
 import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.service.to.ShoppingListTO;
+import tech.onteon.demoapp.graalvm.onteondemoappshoppinglistgraalvm.util.LoggerUtils;
 
 import javax.validation.Valid;
 
@@ -30,6 +32,7 @@ import javax.validation.Valid;
 public class ShoppingListController {
     private final ShoppingListConverter shoppingListConverter;
     private final ShoppingListService shoppingListService;
+    private final Logger log;
 
     public ShoppingListController(
             @Autowired final ShoppingListConverter shoppingListConverter,
@@ -37,10 +40,16 @@ public class ShoppingListController {
     ) {
         this.shoppingListConverter = shoppingListConverter;
         this.shoppingListService = shoppingListService;
+        this.log = LoggerUtils.createLoggerFor(this.getClass());
     }
 
     @PostMapping("/generate/txt")
-    public ResponseEntity<byte[]> generatePdfShoppingList(final @RequestBody @Valid ShoppingListRequest request) {
+    public ResponseEntity<byte[]> generateTxtShoppingList(final @RequestBody @Valid ShoppingListRequest request) {
+        log.info(
+                "Incoming request - generateTxtShoppingList() {title: {}, ingredients: {}}",
+                request.getTitle(),
+                request.getIngredients()
+        );
         final ShoppingListTO shoppingListTO = shoppingListConverter.toShoppingListTO(request);
         final byte[] responseBytes = shoppingListService.generateTxt(shoppingListTO);
 
